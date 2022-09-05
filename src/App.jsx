@@ -1,12 +1,11 @@
 import './App.css';
 import Card from './Componets/Cards'
+import Word from './Componets/Words'
+
 function App() {
   return (
     <div className="App">
-      <Card title="fffffffffffffffffffff" info="TYVYGDGYGUYrgfguyguyrgouighroiughiuhofihfuiohiuhfi hji my name is ota "/>
-      <form>
-        <input> </input>
-      </form>
+      <Word/>
     </div>
   );
 }
