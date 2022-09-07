@@ -15,7 +15,7 @@ export default function Word() {
     const addCard =  (e) => {
       e.preventDefault()
 
-      setNumber(numbers => [...numbers,numbers++])
+      setNumber(numbers + 1)
 
       setList([...list, {
 
@@ -59,8 +59,8 @@ export default function Word() {
           return (
             <div key={item.key} id={item.id}>
 
-              <Card  title={item.title} info={item.para} />
-              <button id={item.id} onClick={() => delCard(item.id)}>Del</button>
+              
+              <Card  title={item.title} info={item.para} > <button id={item.id} onClick={() => delCard(item.id)}>Del</button> </Card>
               <p>Key: {item.key}</p>
               <p>Id: {item.id}</p>
 

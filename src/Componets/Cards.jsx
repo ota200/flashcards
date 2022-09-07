@@ -1,3 +1,4 @@
+import '../App.css';
 import { useState } from "react";
 
 const Card = (props) =>{
@@ -21,10 +22,13 @@ const Card = (props) =>{
   }
 
   return (
-    <div>
-      <h1 style={{visibility: tileVisable}}> {props.title}</h1>
-      <p style={{visibility: infoVisable}}>{props.info}</p>
-      <button onClick={vis}>Test</button>
+    <div className="container">
+
+      <a onClick={vis} >
+        <h1 style={{visibility: tileVisable}}> {props.title}</h1>
+        <p style={{visibility: infoVisable}}>{props.info}</p>
+      </a>
+
     </div>
   );
 }
