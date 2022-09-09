@@ -3,32 +3,35 @@ import { useState } from "react";
 
 const Card = (props) =>{
 
-  const [tileVisable,setTitleVisable] = useState("visible")
-  const [infoVisable,setInfoVisable] = useState("hidden")
+  const [num,setNum] = useState()
 
-  function vis(){
-    if (tileVisable === "hidden"){
-      setTitleVisable("visible")
-      setInfoVisable("hidden")
 
-      console.log("set Title visable")
+  const flip = (e) => {
+
+    if (num === "second"){
+      setNum("first")
 
     } else {
-      setInfoVisable("visible")
-      setTitleVisable("hidden")
-      console.log("set Info visable")
-
+      setNum("second")
     }
+
   }
 
   return (
-    <div className="container">
+    <div className="container" >
 
-      <a onClick={vis} >
-        <h1 style={{visibility: tileVisable}}> {props.title}</h1>
-        <p style={{visibility: infoVisable}}>{props.info}</p>
-      </a>
+      <div className="center" id={num} >
 
+        <div className="front">
+          <h1> {props.title} </h1>
+        </div>
+        <div className='back'>
+          <p> {props.info} </p>
+        </div>
+
+      </div>
+
+      <button onClick={flip}>flip</button>
     </div>
   );
 }
