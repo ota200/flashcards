@@ -20,3 +20,6 @@
 - Flip between defination and the word being defined. 
 
 
+## Features as of September 4, 2022 
+
+- Project started
