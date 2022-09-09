@@ -18,7 +18,7 @@ const Card = (props) =>{
   }
 
   return (
-    <div className="container" >
+    <div className="container" onClick={flip}>
 
       <div className="center" id={num} >
 
@@ -30,8 +30,6 @@ const Card = (props) =>{
         </div>
 
       </div>
-
-      <button onClick={flip}>flip</button>
     </div>
   );
 }
