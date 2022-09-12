@@ -1,11 +1,16 @@
+
+
+.base {
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
     background-color: transparent;
     border-style:solid;
     width:30vw;
     height:30vh;
     perspective: 1000px;
-    display: inline-flex;
-    flex-direction: row;
 
 }
 
@@ -15,6 +20,8 @@
     height: 100%;
     text-align: center;
     transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
 
 
 }
@@ -30,14 +37,17 @@
 }
 
 .front {
-    background-color: black;
+    background-color: #021D27;
     color:white;
+    font-size: 1.5rem;
 }
 
 .back {
-    background-color: aliceblue;
-    color:black;
+    background-color: #021D27;
+    color:white;
     transform: rotateY(180deg);
+    font-size: 0.8rem;
+
 
 }
 

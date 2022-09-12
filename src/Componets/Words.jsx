@@ -55,6 +55,7 @@ export default function Word() {
         
         <button onClick={addCard}>Submit</button>
 
+        <div className="base">
         {list.map(item => {
           return (
             <div key={item.key} id={item.id}>
@@ -67,6 +68,8 @@ export default function Word() {
             </div>
           )
         })}
+
+        </div>
 
 
 
