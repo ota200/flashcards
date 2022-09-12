@@ -4,6 +4,8 @@
     width:30vw;
     height:30vh;
     perspective: 1000px;
+    display: inline-flex;
+    flex-direction: row;
 
 }
 
