@@ -11,7 +11,6 @@ export default function Word() {
 
     const [numbers,setNumber] = useState(0)
 
-    
     const addCard =  (e) => {
       e.preventDefault()
 
@@ -35,6 +34,16 @@ export default function Word() {
 
     const delCard = id => {
       setList(list.filter(item => item.id !== id))
+
+
+
+    /*  for ( let x in list){
+        x++
+        console.log(list[x])
+        setList(list.filter(item => item.id ))
+
+
+      }*/
     }
     
     return (
@@ -54,20 +63,21 @@ export default function Word() {
         </div>
         
         <button onClick={addCard}>Submit</button>
-
-        <div className="base">
+        <div className="base" id="base">
         {list.map(item => {
           return (
             <div key={item.key} id={item.id}>
 
-              
-              <Card  title={item.title} info={item.para} > <button id={item.id} onClick={() => delCard(item.id)}>Del</button> </Card>
+              <button id={item.id} onClick={() => delCard(item.id)}>Del</button> 
+              <Card  title={item.title} info={item.para} > </Card>
               <p>Key: {item.key}</p>
               <p>Id: {item.id}</p>
 
             </div>
+
           )
         })}
+
 
         </div>
 
