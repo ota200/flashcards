@@ -48,6 +48,26 @@ export default function Word() {
     
     return (
       <div>
+
+        
+        <div className="base" id="base">
+        {list.map(item => {
+          return (
+            <div key={item.key} id={item.id}>
+
+              <img  alt="trash" id={item.id} onClick={() => delCard(item.id)} className="del"></img>
+              <Card  title={item.title} info={item.para} > </Card>
+              <p>Key: {item.key}</p>
+              <p>Id: {item.id}</p>
+
+            </div>
+
+          )
+        })}
+
+
+        </div>
+
         <div>
 
           <label>
@@ -61,28 +81,10 @@ export default function Word() {
           </label>
 
         </div>
-        
+
         <button onClick={addCard}>Submit</button>
-        <div className="base" id="base">
-        {list.map(item => {
-          return (
-            <div key={item.key} id={item.id}>
-
-              <button id={item.id} onClick={() => delCard(item.id)}>Del</button> 
-              <Card  title={item.title} info={item.para} > </Card>
-              <p>Key: {item.key}</p>
-              <p>Id: {item.id}</p>
-
-            </div>
-
-          )
-        })}
-
-
-        </div>
-
-
 
       </div>
+
     );
   }
