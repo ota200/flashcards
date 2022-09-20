@@ -55,8 +55,7 @@ export default function Word() {
           return (
             <div key={item.key} id={item.id}>
 
-              <img  alt="trash" id={item.id} onClick={() => delCard(item.id)} className="del"></img>
-              <Card  title={item.title} info={item.para} > </Card>
+              <Card  title={item.title} info={item.para} click={() => delCard(item.id)}> </Card>
               <p>Key: {item.key}</p>
               <p>Id: {item.id}</p>
 

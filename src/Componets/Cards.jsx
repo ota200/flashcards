@@ -24,10 +24,15 @@ const Card = (props) =>{
 
         <div className="front">
           <h1> {props.title} </h1>
+          <a class="trash" onClick={props.click}>ijoijioj</a>
+
         </div>
         <div className='back'>
           <p> {props.info} </p>
+          <a class="trash" onClick={props.click}><img src="./g.png" alt="g"></img></a>
+
         </div>
+
 
       </div>
     </div>
