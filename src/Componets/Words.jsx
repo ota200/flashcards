@@ -67,7 +67,7 @@ export default function Word() {
 
         </div>
 
-        <div>
+        <div className="forms">
 
           <label>
             <p>Title</p>
@@ -79,9 +79,10 @@ export default function Word() {
             <textarea type="text" onChange={e => setInfor(e.target.value)} name="info"/>
           </label>
 
+          <button onClick={addCard}>Submit</button>
+
         </div>
 
-        <button onClick={addCard}>Submit</button>
 
       </div>
 

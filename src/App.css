@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .base {
@@ -17,8 +21,8 @@
 
 .container {
     background-color: transparent;
-    width:50vw;
-    height:30vw;
+    width:40vw;
+    height:25vw;
     perspective: 1000px;
     flex: 0 0 auto;
 
@@ -28,25 +32,31 @@
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transform-style: preserve-3d;
     border-radius: 3rem;
     position: absolute;
-
     border-color: #C6C6C6;
 
+
 }
+
 
 .front,.back{
     position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    display:flex;
+
     width:100%;
     height: 100%;
     overflow-wrap: break-word;
     border: solid;
     border-radius: 3rem;
     border-color: #C6C6C6;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+
 
 }
 
@@ -79,9 +89,45 @@
 
 /* Deleate button */
 .trash {
-    border:none;
-    background-image: url("g.png");
-    width:100rem;
-    height:100rem;
+    position:absolute;
+    left:90%;
+    top:80%;
+
+    width:2rem;
+    height:2rem;
+
+}
+
+.forms {
+    position:fixed;
+    background-color: #021d27a2;
+    width:100%;
+    height:25vw;
+    display: flex;
+
+    top:80%;
+    border-radius: 3rem;
+
+}
+
+.forms:hover{
+
+    top:70%;
+}
+
+.forms input{
+    width:80%;
+    height:20%;
+
+}
+
+.forms textarea{
+    width:80%;
+    height: 50%;
+}
+
+.forms button{
+    width:10%;
+    height:20%;
 
 }
