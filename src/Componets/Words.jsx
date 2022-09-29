@@ -5,11 +5,25 @@ import Card from './Cards'
 export default function Word() {
 
     const [titles,setTitles] = useState()
+
     const [infor,setInfor] = useState()
 
     const [list,setList] = useState([])
 
     const [numbers,setNumber] = useState(0)
+
+    const [clicks,setClicks] = useState(0)
+
+    const [styles,setStyles] = useState()
+
+    const ogposition = {
+      top:"110vh"
+    }
+
+    const newposition = {
+      top:"50vh"
+    }
+
 
     const addCard =  (e) => {
       e.preventDefault()
@@ -45,7 +59,24 @@ export default function Word() {
 
       }*/
     }
+
+    const clickStyle = (e) =>{
+      if (clicks === 0){
+        //alert("click")
+        setClicks(1)
+        setStyles(newposition)
+      } 
+      
+      if (clicks === 1){
+        //alert("click == 1")
+        setClicks(0)
+        setStyles(ogposition)
+
+
+      }
+    }
     
+
     return (
       <div>
 
@@ -66,6 +97,8 @@ export default function Word() {
 
 
         </div>
+
+        <button className="create" title="create a new card" onClick={clickStyle} > + </button>
 
         <div className="forms">
 
