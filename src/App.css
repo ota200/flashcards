@@ -68,7 +68,7 @@
     font-size: 1.5rem;
 }
 
-.front textarea,input {
+.front input {
     background-color: #021D27;
     border:none;
     border-bottom: 1px  #ffffff;
@@ -91,13 +91,15 @@
 
 }
 
-.back textarea,input {
+.back textarea {
     background-color: #021D27;
     border:none;
     border-bottom: 1px  #ffffff;
     color:white;
     width:80%;
-    font-size: 3rem;
+    height:80%;
+
+    font-size: 2rem;
     text-align: center;
     overflow:hidden; 
     resize:none;

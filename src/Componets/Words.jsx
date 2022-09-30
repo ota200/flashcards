@@ -99,6 +99,7 @@ export default function Word() {
         </div>
 
         <button onClick={addCard} className="create" title="create a new card"> + </button>
+        <button className="create" title="settings"> x </button>
 
 
 
