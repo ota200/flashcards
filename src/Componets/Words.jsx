@@ -12,17 +12,17 @@ export default function Word() {
 
     const [numbers,setNumber] = useState(0)
 
-    const [clicks,setClicks] = useState(0)
+   /* const [clicks,setClicks] = useState(0)
 
-    const [styles,setStyles] = useState()
+    const [styles,setStyles] = useState()*/
 
-    const ogposition = {
-      top:"110vh"
+    /*const ogposition = {
+      right:"120%"
     }
 
     const newposition = {
-      top:"50vh"
-    }
+      right:"80%"
+    }*/
 
 
     const addCard =  (e) => {
@@ -60,7 +60,7 @@ export default function Word() {
       }*/
     }
 
-    const clickStyle = (e) =>{
+    /*const clickStyle = (e) =>{
       if (clicks === 0){
         //alert("click")
         setClicks(1)
@@ -74,7 +74,7 @@ export default function Word() {
 
 
       }
-    }
+    }*/
     
 
     return (
@@ -86,7 +86,7 @@ export default function Word() {
           return (
             <div key={item.key} id={item.id}>
 
-              <Card  title={item.title} info={item.para} click={() => delCard(item.id)}> </Card>
+              <Card  title={item.title} info={item.para} click={() => delCard(item.id)} titlechange={(e) => {setTitles(e.target.value)}} infochange={e => setInfor(e.target.value)}> </Card>
               <p>Key: {item.key}</p>
               <p>Id: {item.id}</p>
 
@@ -98,10 +98,17 @@ export default function Word() {
 
         </div>
 
-        <button className="create" title="create a new card" onClick={clickStyle} > + </button>
+        <button onClick={addCard} className="create" title="create a new card"> + </button>
 
-        <div className="forms">
 
+
+
+      </div>
+
+    );
+  }
+
+  /*
           <label>
             <p>Title</p>
             <input type="text" onChange={(e) => {setTitles(e.target.value)}} name="title"/>
@@ -111,13 +118,10 @@ export default function Word() {
             <p>Not Title</p>
             <textarea type="text" onChange={e => setInfor(e.target.value)} name="info"/>
           </label>
+          
+                  <div className="forms">
+
 
           <button onClick={addCard}>Submit</button>
 
-        </div>
-
-
-      </div>
-
-    );
-  }
+        </div>*/ 

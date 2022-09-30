@@ -3,6 +3,8 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color:black;
+
 }
 
 .base {
@@ -66,6 +68,20 @@
     font-size: 1.5rem;
 }
 
+.front textarea,input {
+    background-color: #021D27;
+    border:none;
+    border-bottom: 1px  #ffffff;
+    color:white;
+    width:80%;
+    height:30%;
+    font-size: 3rem;
+    text-align: center;
+    overflow:hidden; 
+    resize:none;
+
+}
+
 .back {
     background-color: #021D27;
     color:white;
@@ -75,8 +91,23 @@
 
 }
 
+.back textarea,input {
+    background-color: #021D27;
+    border:none;
+    border-bottom: 1px  #ffffff;
+    color:white;
+    width:80%;
+    font-size: 3rem;
+    text-align: center;
+    overflow:hidden; 
+    resize:none;
+
+}
+
 #first{
     transform: rotateY(0deg);
+    color:black;
+
 }
 
 #second{
@@ -105,11 +136,11 @@
     width:25vw;
     display: flex;
     z-index: 100000;
-    perspective: 600;
-    right:120%;
+    right:70%;
     border-radius: 3rem;
 
 }
+
 
 
 

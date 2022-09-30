@@ -1,0 +1,1 @@
+- Check if both, the div and the input tage are clicked if not the flip if is then don't
