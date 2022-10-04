@@ -12,6 +12,18 @@ export default function Word() {
 
     const [numbers,setNumber] = useState(0)
 
+    const base = {
+      display: "flex",
+      flexWrap: "nowrap",
+      overflowX: "auto",
+      webkitOverflowScrolling: "touch",
+      msOverflowStyle: "-ms-autohiding-scrollbar", 
+      position: "absolute",
+      left: "50%",
+      top: "50%",
+      transform: "translate(-50%, -50%)"
+    }
+
    /* const [clicks,setClicks] = useState(0)
 
     const [styles,setStyles] = useState()*/
@@ -81,7 +93,7 @@ export default function Word() {
       <div>
 
         
-        <div className="base" id="base">
+        <div style={base} id="base">
         {list.map(item => {
           return (
             <div key={item.key} id={item.id}>
@@ -99,7 +111,6 @@ export default function Word() {
         </div>
 
         <button onClick={addCard} className="create" title="create a new card"> + </button>
-        <button className="create" title="settings"> x </button>
 
 
 

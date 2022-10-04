@@ -7,18 +7,6 @@
 
 }
 
-.base {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar; 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
-}
 
 .container {
     background-color: transparent;
@@ -141,6 +129,12 @@
     right:70%;
     border-radius: 3rem;
 
+}
+
+.forms p {
+    color:white;
+    text-align: center;
+    justify-content: center;
 }
 
 
