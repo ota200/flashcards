@@ -11,12 +11,13 @@ const Card = (props) =>{
 
   const [editInfos,setEditInfos] = useState()
 
-  const enter = () =>{
+  const enter = (e) =>{
     setNum2(1)
     console.log("enter")
   }
 
-  const leave = () =>{
+  const leave = (e) =>{
+    console.warn(e.target.contenteditable)
     setNum2(0)
     console.log("leave")
 
@@ -24,7 +25,6 @@ const Card = (props) =>{
 
   const editMode = () =>{
 
-    setNum2(1)
 
     if (num3 === "true"){
       setNum3("false")
@@ -57,14 +57,14 @@ const Card = (props) =>{
   }
 
 
-  const editTitle = <input id="front-card-text" type="text" onChange={props.titlechange} placeholder="Add your title"   wrap="soft" maxlength="20" onMouseEnter={enter} onMouseLeave={leave} ></input>
+  /*const editTitle = <input id="front-card-text" type="text" onChange={props.titlechange} placeholder="Add your title"   wrap="soft" maxlength="20" onMouseEnter={enter} onMouseLeave={leave} ></input>
 
   const Title = <p>{props.title}</p>
 
   const Info = <p>{props.info}</p>
 
   const editInfo = <textarea id="front-card-text" type="text" onChange={props.infochange} placeholder="Add your information"  wrap="soft" onMouseEnter={enter} onMouseLeave={leave}></textarea>
-
+*/
 
   return (
     
@@ -85,7 +85,9 @@ const Card = (props) =>{
         </div>
         <div className='back'>
           
-          <p contenteditable={num3} onChange={props.infochange} onMouseEnter={enter} onMouseLeave={leave}>Info</p>
+          <p contenteditable={num3} onChange={props.infochange} onMouseEnter={enter} onMouseLeave={leave} >Info</p>
+
+          
 
 
           <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave}>edit</button>

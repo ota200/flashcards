@@ -99,8 +99,7 @@ export default function Word() {
             <div key={item.key} id={item.id}>
 
               <Card  title={item.title} info={item.para} click={() => delCard(item.id)} titlechange={(e) => {setTitles(e.target.value)}} infochange={e => setInfor(e.target.value)}> </Card>
-              <p>Key: {item.key}</p>
-              <p>Id: {item.id}</p>
+              <p Style="color:black;">{titles}</p>
 
             </div>
 
@@ -136,4 +135,8 @@ export default function Word() {
 
           <button onClick={addCard}>Submit</button>
 
-        </div>*/ 
+        </div>
+        
+        
+                      <p>Key: {item.key}</p>
+              <p>Id: {item.id}</p>*/ 
