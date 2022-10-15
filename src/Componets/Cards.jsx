@@ -13,16 +13,32 @@ const Card = (props) =>{
 
   const enter = (e) =>{
     setNum2(1)
-    console.log("enter")
+    console.log("Eenter")
   }
 
   const leave = (e) =>{
     console.warn(e.target.contenteditable)
     setNum2(0)
-    console.log("leave")
+    console.log("Lleave")
 
   }
 
+
+  const enter2 = (e) =>{
+    if (num3 === "true"){
+      setNum2(1)
+      console.log("Eenter")
+      } else {
+        setNum2(0)
+      }
+  }
+
+  const leave2 = (e) =>{
+    console.warn(e.target.contenteditable)
+    setNum2(0)
+    console.log("Lleave")
+
+  }
 
   const editMode = () =>{
 
@@ -30,11 +46,15 @@ const Card = (props) =>{
       setNum3("false")
       /*setEditTitles(Title)
       setEditInfos(Info)*/
+      console.log("Edit mode off")
+
 
     } else {
       setNum3("true")
      /* setEditTitles(editTitle)
       setEditInfos(editInfo)*/
+      console.log("Edit mode on")
+
     }
 
   }
@@ -56,9 +76,6 @@ const Card = (props) =>{
 
   }
 
-  const double = (e) =>{
-    alert("ehiohoihjreoihrorhoirhoire")
-  }
 
 
   /*const editTitle = <input id="front-card-text" type="text" onChange={props.titlechange} placeholder="Add your title"   wrap="soft" maxlength="20" onMouseEnter={enter} onMouseLeave={leave} ></input>
@@ -77,30 +94,21 @@ const Card = (props) =>{
       <div className="center" id={num}>
 
         <div className="front" id="front-card">
-          <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave}>edit</button>
 
-          <h1 contenteditable={num3} onChange={props.titlechange} onDoubleClick={editMode} onMouseEnter={enter} onMouseLeave ={leave}>Title</h1>
+          <h1 contenteditable={num3} onChange={props.titlechange} onMouseEnter={enter2} onMouseLeave={leave2}  >Title</h1>
           
-          <p onClick={props.click}><svg className="trash" viewBox="0 0 54 68" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.91699 14.6388H51.5558V60.9999C51.5558 64.8659 48.4218 67.9999 44.5558 67.9999H9.917C6.05101 67.9999 2.91699 64.8658 2.91699 60.9999V14.6388Z" fill="#C6C6C6"/>
-<path d="M10.4335 4.48611C10.7689 4.48611 11.0988 4.4018 11.393 4.24093L18.701 0.245175C18.9953 0.0843095 19.3252 0 19.6605 0H27.3543H35.0481C35.3834 0 35.7134 0.0843094 36.0076 0.245175L43.3156 4.24093C43.6098 4.4018 43.9398 4.48611 44.2751 4.48611H50.2243C51.089 4.48611 51.8558 5.04178 52.1249 5.86349L53.0576 8.7107C53.4813 10.0038 52.5178 11.3333 51.157 11.3333H3.07555C1.65049 11.3333 0.682639 9.88539 1.22751 8.56862L2.40567 5.7214C2.71506 4.9737 3.44452 4.48611 4.2537 4.48611H10.4335Z" fill="#C6C6C6"/>
-</svg></p>
+          <button onClick={props.click}></button>
+          <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave}>edit</button>
 
 
         </div>
         <div className='back'>
           
-          <p contenteditable={num3} onChange={props.infochange} onMouseEnter={enter} onMouseLeave={leave} >Info</p>
-
-          
-
+          <pre contenteditable={num3} onChange={props.infochange}  onMouseEnter={enter2} onMouseLeave={leave2}  >Info</pre>
 
           <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave} onDoubleClick={editMode}>edit</button>
 
-          <p onClick={props.click}><svg className="trash" viewBox="0 0 54 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.91699 14.6388H51.5558V60.9999C51.5558 64.8659 48.4218 67.9999 44.5558 67.9999H9.917C6.05101 67.9999 2.91699 64.8658 2.91699 60.9999V14.6388Z" fill="#C6C6C6"/>
-<path d="M10.4335 4.48611C10.7689 4.48611 11.0988 4.4018 11.393 4.24093L18.701 0.245175C18.9953 0.0843095 19.3252 0 19.6605 0H27.3543H35.0481C35.3834 0 35.7134 0.0843094 36.0076 0.245175L43.3156 4.24093C43.6098 4.4018 43.9398 4.48611 44.2751 4.48611H50.2243C51.089 4.48611 51.8558 5.04178 52.1249 5.86349L53.0576 8.7107C53.4813 10.0038 52.5178 11.3333 51.157 11.3333H3.07555C1.65049 11.3333 0.682639 9.88539 1.22751 8.56862L2.40567 5.7214C2.71506 4.9737 3.44452 4.48611 4.2537 4.48611H10.4335Z" fill="#C6C6C6"/>
-</svg></p>
+          <button onClick={props.click}></button>
 
         </div>
 

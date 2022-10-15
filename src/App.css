@@ -24,8 +24,6 @@
     transform-style: preserve-3d;
     border-radius: 3rem;
     position: absolute;
-    border-color: #C6C6C6;
-
 
 }
 
@@ -39,25 +37,18 @@
     overflow-wrap: break-word;
     border: solid;
     border-radius: 1.5rem;
-    border-color: #C6C6C6;
     align-items:center;
     text-align: center;
-
-
+    background-color: aliceblue;
 }
 
 
 
 .front {
-    background-color: #021D27;
-    color:white;
     font-size: 1.5rem;
 }
 
-.front h1,p {
-    color:white;
-    width:80%;
-    height:30%;
+.front h1 {
     font-size: 3rem;
     text-align: center;
     overflow:hidden; 
@@ -66,22 +57,13 @@
 }
 
 .back {
-    background-color: #021D27;
-    color:white;
     transform: rotateY(180deg);
     font-size: 0.8rem;
 
 
 }
 
-.back textarea {
-    background-color: #021D27;
-    border:none;
-    border-bottom: 1px  #ffffff;
-    color:white;
-    width:80%;
-    height:80%;
-
+.back pre {
     font-size: 2rem;
     text-align: center;
     overflow:hidden; 
@@ -92,69 +74,14 @@
 #first{
     transform: rotateY(0deg);
     color:black;
+    background-color: aliceblue;
 
 }
 
 #second{
     transform: rotateY(180deg);
     color:black;
-    backface-visibility: visible;
-
-
-}
-
-/* Deleate button */
-.trash {
-    position:absolute;
-    left:90%;
-    top:80%;
-    background-color: #00000000;
-    width:2rem;
-    height:2rem;
+    background-color: aliceblue;
 
 }
 
-.forms {
-    position:fixed;
-    background-color: #021d27a2;
-    height:100%;
-    width:25vw;
-    display: flex;
-    z-index: 100000;
-    right:70%;
-    border-radius: 3rem;
-
-}
-
-.forms p {
-    color:white;
-    text-align: center;
-    justify-content: center;
-}
-
-
-
-
-
-.create{
-    background-color: #021D27;
-    border: solid;
-    border-radius: 2rem;
-    border-color:whitesmoke;
-    justify-content: center;
-    text-align: center;
-    font-size: 5rem;
-    color:whitesmoke;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    
-
-}
-
-#base {
-    display: flex;
-    flex-direction: column;
-    height:80%;
-    overflow: scroll;
-
-}
