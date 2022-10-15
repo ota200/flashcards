@@ -23,8 +23,8 @@ const Card = (props) =>{
 
   }
 
-  const editMode = () =>{
 
+  const editMode = () =>{
 
     if (num3 === "true"){
       setNum3("false")
@@ -56,6 +56,10 @@ const Card = (props) =>{
 
   }
 
+  const double = (e) =>{
+    alert("ehiohoihjreoihrorhoirhoire")
+  }
+
 
   /*const editTitle = <input id="front-card-text" type="text" onChange={props.titlechange} placeholder="Add your title"   wrap="soft" maxlength="20" onMouseEnter={enter} onMouseLeave={leave} ></input>
 
@@ -69,12 +73,13 @@ const Card = (props) =>{
   return (
     
     <div className="container" onClick={flip} >
+      
       <div className="center" id={num}>
 
         <div className="front" id="front-card">
           <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave}>edit</button>
 
-          <h1 contenteditable={num3} onChange={props.titlechange} onMouseEnter={enter} onMouseLeave ={leave}>Title</h1>
+          <h1 contenteditable={num3} onChange={props.titlechange} onDoubleClick={editMode} onMouseEnter={enter} onMouseLeave ={leave}>Title</h1>
           
           <p onClick={props.click}><svg className="trash" viewBox="0 0 54 68" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.91699 14.6388H51.5558V60.9999C51.5558 64.8659 48.4218 67.9999 44.5558 67.9999H9.917C6.05101 67.9999 2.91699 64.8658 2.91699 60.9999V14.6388Z" fill="#C6C6C6"/>
@@ -90,7 +95,7 @@ const Card = (props) =>{
           
 
 
-          <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave}>edit</button>
+          <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave} onDoubleClick={editMode}>edit</button>
 
           <p onClick={props.click}><svg className="trash" viewBox="0 0 54 68" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.91699 14.6388H51.5558V60.9999C51.5558 64.8659 48.4218 67.9999 44.5558 67.9999H9.917C6.05101 67.9999 2.91699 64.8658 2.91699 60.9999V14.6388Z" fill="#C6C6C6"/>
@@ -101,6 +106,7 @@ const Card = (props) =>{
 
 
       </div>
+
     </div>
   );
 }

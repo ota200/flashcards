@@ -34,7 +34,6 @@
     position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    display:flex;
     width:100%;
     height: 100%;
     overflow-wrap: break-word;
@@ -149,5 +148,13 @@
     padding-left: 3rem;
     padding-right: 3rem;
     
+
+}
+
+#base {
+    display: flex;
+    flex-direction: column;
+    height:80%;
+    overflow: scroll;
 
 }
