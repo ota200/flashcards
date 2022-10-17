@@ -5,7 +5,7 @@ const Card = (props) =>{
 
   const [num,setNum] = useState("first")
   const [num2,setNum2] = useState(0)
-  const [num3,setNum3] = useState("false")
+  const [num3,setNum3] = useState("disabled")
 
   const [editTitles,setEditTitles] = useState()
 
@@ -14,10 +14,11 @@ const Card = (props) =>{
   const enter = (e) =>{
     setNum2(1)
     console.log("Eenter")
+    console.log(e.currentTarget.value)
   }
 
   const leave = (e) =>{
-    console.warn(e.target.contenteditable)
+    //console.warn(e.target.contenteditable)
     setNum2(0)
     console.log("Lleave")
 
@@ -25,16 +26,12 @@ const Card = (props) =>{
 
 
   const enter2 = (e) =>{
-    if (num3 === "true"){
       setNum2(1)
       console.log("Eenter")
-      } else {
-        setNum2(0)
-      }
   }
 
   const leave2 = (e) =>{
-    console.warn(e.target.contenteditable)
+    //console.warn(e.target.contenteditable)
     setNum2(0)
     console.log("Lleave")
 
@@ -42,15 +39,15 @@ const Card = (props) =>{
 
   const editMode = () =>{
 
-    if (num3 === "true"){
-      setNum3("false")
+    if (num3 === ""){
+      setNum3("disabled")
       /*setEditTitles(Title)
       setEditInfos(Info)*/
       console.log("Edit mode off")
 
 
     } else {
-      setNum3("true")
+      setNum3("enabled")
      /* setEditTitles(editTitle)
       setEditInfos(editInfo)*/
       console.log("Edit mode on")
@@ -89,13 +86,14 @@ const Card = (props) =>{
 
   return (
     
-    <div className="container" onClick={flip} >
+    <div className="container" >
+      <button onClick={props.sub}>Save</button>
       
-      <div className="center" id={num}>
+      <div className="center" id={num}  onClick={flip}>
 
         <div className="front" id="front-card">
 
-          <h1 contenteditable={num3} onChange={props.titlechange} onMouseEnter={enter2} onMouseLeave={leave2}  >Title</h1>
+          <input onChange={props.titlechange} onMouseEnter={enter2} onMouseLeave={leave2}  placeholder="Title"></input>
           
           <button onClick={props.click}></button>
           <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave}>edit</button>
@@ -104,7 +102,7 @@ const Card = (props) =>{
         </div>
         <div className='back'>
           
-          <pre contenteditable={num3} onChange={props.infochange}  onMouseEnter={enter2} onMouseLeave={leave2}  >Info</pre>
+          <textarea onChange={props.infochange}  onMouseEnter={enter2} onMouseLeave={leave2}  placeholder="Info" ></textarea>
 
           <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave} onDoubleClick={editMode}>edit</button>
 

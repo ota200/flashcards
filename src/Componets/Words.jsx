@@ -41,7 +41,7 @@ export default function Word() {
       e.preventDefault()
 
       setNumber(numbers + 1)
-
+      
       setList([...list, {
 
         title:titles,
@@ -52,10 +52,23 @@ export default function Word() {
 
       }])
 
+
       /*console.log(list)
       console.log("Title: " + titles)
       console.log("Info: " + infor)*/
     
+    }
+
+    const submit =(e) => {
+      setList([...list, {
+
+        title:titles,
+        para:infor,
+        key: numbers,
+        id: Math.random()
+        
+
+      }])
     }
 
     const delCard = id => {
@@ -98,8 +111,9 @@ export default function Word() {
           return (
             <div key={item.key} id={item.id}>
 
-              <Card  title={item.title} info={item.para} click={() => delCard(item.id)} titlechange={(e) => {setTitles(e.target.value)}} infochange={e => setInfor(e.target.value)}> </Card>
+              <Card  title={item.title} info={item.para} sub={submit}click={() => delCard(item.id)} titlechange={(e) => {setTitles(e.target.value)}} infochange={e => setInfor(e.target.value)}> </Card>
               <p Style="color:black;">{titles}</p>
+              <p>{item.title}</p>
 
             </div>
 
@@ -111,7 +125,7 @@ export default function Word() {
 
         <button onClick={addCard} className="create" title="create a new card"> + </button>
 
-
+        <button className="create" onClick={() => console.log(list)}>iojoij</button>
 
 
       </div>
