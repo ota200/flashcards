@@ -93,7 +93,7 @@ const Card = (props) =>{
 
         <div className="front" id="front-card">
 
-          <input onChange={props.titlechange} onMouseEnter={enter2} onMouseLeave={leave2}  placeholder="Title"></input>
+          <input value={props.title}onChange={props.titlechange} onMouseEnter={enter2} onMouseLeave={leave2}  placeholder="Title"></input>
           
           <button onClick={props.click}></button>
           <button onClick={editMode} onMouseEnter={enter} onMouseLeave={leave}>edit</button>
