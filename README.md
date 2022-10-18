@@ -12,7 +12,7 @@ I just wanted to create a app that could be actualy usefull for me, and release 
 - Notion ( easy to use commands, and simple ui )
 - Monkeytype ( custimization )
 
-This app is something I will be working on and off for a few months (3-4), and really its just for , so if you want to use this app, it might be a while for these features to be relased. 
+This app is something I will be working on and off for a few months (3-4), and really its just for fun, so if you want to use this app, it might be a while for these features to be relased. 
 
 # Releases 
 So far I have only one release, though its not in beta, things dont save, and has extremely basic ui/ux. Put you can still view the release notes here: 
