@@ -8,8 +8,8 @@ So far, I am in the beta stages of this app, still working on the features and s
 
 ## Why did I make this app 
 I just wanted to create an app that could be actually useful for me and release it for free. Also, Quizlet isn't really free anymore so this is sort of an open-sourced but a bit less collaborative version of that. I am also in the future going to try to add features from apps like : 
-- RemNote ( active recall, recursion)
-- Notion (easy-to-use commands, and simple UI )
+- RemNote ( active recall, recursion )
+- Notion ( easy-to-use commands, and simple UI )
 - Monkeytype ( customization )
 
 This app is something I will be working on and off for a few months (3-4), and really it's just for fun, so if you want to use this app, it might be a while before these features are released. 
