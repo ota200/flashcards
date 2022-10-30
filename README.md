@@ -1,7 +1,7 @@
 # A simple flash cards App 
 
 ## What is this? 
-This is just a simple flashcard app I made so far I have been doing it for ```2 months ``
+This is just a simple flashcard app I made so far I have been doing it for ``2 months ``
 
 ## How to use it? 
 So far, I am in the beta stages of this app, still working on the features and styling of this app. It is also only a web app right now. 
